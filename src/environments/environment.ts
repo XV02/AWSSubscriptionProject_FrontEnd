@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://ec2-54-165-185-193.compute-1.amazonaws.com:3000/awsSubProj/api/v1/',
+  apiUrl: 'http://ec2-54-165-185-193.compute-1.amazonaws.com/awsSubProj/api/v1/',
 };
 
 /*
