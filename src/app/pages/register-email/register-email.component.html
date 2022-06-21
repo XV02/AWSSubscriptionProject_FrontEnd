@@ -1,0 +1,24 @@
+<div>   
+    <hr>
+    <h1>Newsletter register</h1>
+    <hr>      
+    <form [formGroup]="form" (submit)="registerEmail()">
+            <div>
+                <mat-form-field appearance="fill">
+                        <mat-label for="email">E-mail</mat-label>
+                        <input matInput type="text" name ="email" formControlName="email" placeholder="Email" required>
+                        <mat-error>Field required</mat-error>
+                </mat-form-field>
+            </div>
+            <hr>
+            <div class="buttons">
+                    <button type="submit" mat-raised-button color="primary" name="RegisterEmailButton" [disabled]="form.invalid">Register Email</button>
+            </div>
+            <hr>
+            <span *ngIf="serverError">Database Error</span>
+            <span *ngIf="duplicatedError">This email is already registered</span>
+            <span class="success" *ngIf="success">Email registered successfully</span>
+    </form>
+</div>
+
+
